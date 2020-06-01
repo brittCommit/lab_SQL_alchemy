@@ -31,6 +31,16 @@ def create_movie(title, overview, release_date, poster_path):
 
     return movie
 
+def get_users():
+    """Return all users"""
+
+    return User.query.all()
+
+def get_user_by_id(user_id):
+    """Return user by id"""
+
+    return User.query.get(user_id)
+
 def get_movies():
     """Returns all movies"""
 
@@ -50,8 +60,6 @@ def create_rating(user, movie, score):
     db.session.commit()
 
     return rating 
-
-
 
 
 
